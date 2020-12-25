@@ -1,13 +1,3 @@
-// Copyright 2017 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-// This is a temporary ignore to allow us to land a new set of linter rules in a
-// series of manageable patches instead of one gigantic PR. It disables some of
-// the new lints that are already failing on this plugin, for this plugin. It
-// should be deleted and the failing lints addressed as soon as possible.
-// ignore_for_file: public_member_api_docs
-
 import 'package:intl/intl.dart';
 
 /// Android side authentication messages.
@@ -80,24 +70,24 @@ class IOSAuthMessages {
 
 // Strings for local_authentication plugin. Currently supports English.
 // Intl.message must be string literals.
-String get androidFingerprintHint => Intl.message('Touch sensor',
+String get androidFingerprintHint => Intl.message('',
     desc: 'Hint message advising the user how to scan their fingerprint. It is '
         'used on Android side. Maximum 60 characters.');
 
 String get androidFingerprintNotRecognized =>
-    Intl.message('Fingerprint not recognized. Try again.',
+    Intl.message('Отпечаток не распознан, попробуйте еще раз',
         desc: 'Message to let the user know that authentication was failed. It '
             'is used on Android side. Maximum 60 characters.');
 
-String get androidFingerprintSuccess => Intl.message('Fingerprint recognized.',
+String get androidFingerprintSuccess => Intl.message('Отпечаток распознан',
     desc: 'Message to let the user know that authentication was successful. It '
         'is used on Android side. Maximum 60 characters.');
 
-String get androidCancelButton => Intl.message('Cancel',
+String get androidCancelButton => Intl.message('Отмена',
     desc: 'Message showed on a button that the user can click to leave the '
         'current dialog. It is used on Android side. Maximum 30 characters.');
 
-String get androidSignInTitle => Intl.message('Fingerprint Authentication',
+String get androidSignInTitle => Intl.message('Сканнер отпечатка пальцев',
     desc: 'Message showed as a title in a dialog which indicates the user '
         'that they need to scan fingerprint to continue. It is used on '
         'Android side. Maximum 60 characters.');
